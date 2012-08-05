@@ -13,13 +13,17 @@ int main(const int argc, const char ** argv) {
     }
 
     for (i = 1; i < argc; i++)
-        arr[i] = strtol(argv[i], NULL, 10);
+        arr[i-1] = strtol(argv[i], NULL, 10);
 
-    (*sort)(arr, argc);
+    printf("Before: ");
+    for (i = 0; i < argc - 1; i++)
+        printf("%3ld ", arr[i]);
 
-    printf("Result: ");
-    for (i = 1; i < argc; i++)
-        printf("%ld ", arr[i]);
+    (*sort)(arr, argc - 1);
+
+    printf("\nResult: ");
+    for (i = 0; i < argc - 1; i++)
+        printf("%3ld ", arr[i]);
     printf("\n");
 
     free(arr);
