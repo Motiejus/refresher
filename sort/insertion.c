@@ -6,7 +6,7 @@ static void swap(Itm *a, Itm *b) {
     *b = tmp;
 }
 
-void insertion_sort(Itm *arr, int len) {
+static void insertion_sort(Itm *arr, int len) {
     int i, j;
 
     for(i = 0; i < len; i++)
@@ -18,4 +18,4 @@ void insertion_sort(Itm *arr, int len) {
                 break;
 }
 
-void(*sort) (Itm*, int) = insertion_sort;
+REGISTER_SORT(insertion_sort);
