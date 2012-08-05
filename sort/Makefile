@@ -2,7 +2,8 @@ CFLAGS = -g -Wall -Wextra -pedantic
 
 .PHONY: all
 
-all: insertion-sort quick-sort
+all: insertion quick
 
-%-sort: %.o main.o
-	@true
+insertion: insertion.o main.o
+
+quick: quick.o main.o
