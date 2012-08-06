@@ -25,3 +25,4 @@ TODO
 5. Medžio perėjimo problemos: inorder, preorder, ETC. Complexity.
 6. Prisiminti SAT.
 7. live lock?
+8. number theory, ch. 31 "GoF".
