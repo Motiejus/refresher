@@ -19,7 +19,6 @@ TODO
     Merge: space complexity: log n
     Heap:  ?
 2. Prisiminti AVL medžius
-3. Pasirašyti savą hash lentą
 4. There are 3 basic ways to represent a graph in memory (objects and pointers,
    matrix, and adjacency list). Pros and cons.
 5. Medžio perėjimo problemos: inorder, preorder, ETC. Complexity.
