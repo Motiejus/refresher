@@ -14,14 +14,8 @@ Kaip garsiai spręsti uždavinį
 TODO
 ====
 
-1. Sort: merge vs quick vs heap 
+1. Sort: merge vs quick vs heap -- implement.
     Quick: space complexity: log n
     Merge: space complexity: log n
     Heap:  ?
-2. Prisiminti AVL medžius
-4. There are 3 basic ways to represent a graph in memory (objects and pointers,
-   matrix, and adjacency list). Pros and cons.
-5. Medžio perėjimo problemos: inorder, preorder, ETC. Complexity.
-6. Prisiminti SAT.
-7. live lock?
 8. number theory, ch. 31 "GoF".
