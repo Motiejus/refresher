@@ -7,24 +7,27 @@ static void swap(Itm *a, Itm *b) {
     *b = tmp;
 }
 
-static int partition(Itm *arr, int left, int right) {
-    int pivotIdx = right;
+/*
+ * arr[i] is the last element smaller than pivot
+ * arr[j] is the first unknown element (not split)
+ * arr[++i] is the first element larger than pivot
+ */
+static int partition(Itm *arr, int p, int r) {
+    int j, i = p - 1;
 
-    while (left < right) {
-        while (arr[left] <= arr[pivotIdx]) left++;
-        while (arr[right] > arr[pivotIdx]) right--;
-        if (left < right) swap(&arr[left], &arr[right]);
-    }
-    arr[right] = arr[pivotIdx];
-    arr[pivotIdx] = arr[right];
-    return pivotIdx;
+    for (j = p; j < r; j++)
+        if(arr[j] <= arr[r])
+            swap(arr + ++i, arr + j);
+
+    swap(arr+i+1, arr+r);
+    return i+1;
 }
 
-static void quick_sort_f(Itm *arr, int left, int right) {
-    int pivotIdx = partition(arr, left, right);
-    if (left < right) {
-        quick_sort_f(arr, left, pivotIdx - 1);
-        quick_sort_f(arr, pivotIdx + 1, right);
+static void quick_sort_f(Itm *arr, int p, int r) {
+    if (p < r) {
+        int q = partition(arr, p, r);
+        quick_sort_f(arr, p, q-1);
+        quick_sort_f(arr, q+1, r);
     }
 }
 
