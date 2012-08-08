@@ -7,3 +7,6 @@ all: insertion quick
 insertion: insertion.o main.o
 
 quick: quick.o main.o
+
+heap: heap.o main.o
+
