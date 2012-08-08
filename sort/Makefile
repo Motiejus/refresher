@@ -13,5 +13,5 @@ quick: quick.o main.o
 
 heap: heap.o main.o
 
-test:
+test: $(ALL_C)
 	./test.sh $(ALL_C) $(ALL_PY)

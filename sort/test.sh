@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DATA=$(seq -20 40 | shuf)
+DATA=$(seq -10 10 | shuf)
 
 FILE=`mktemp`
 
