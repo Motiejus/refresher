@@ -1,8 +1,11 @@
 CFLAGS = -g -Wall -Wextra -pedantic
 
-.PHONY: all
+ALL_C = insertion quick heap
+ALL_PY = $(wildcard *.py)
 
-all: insertion quick
+.PHONY: all test
+
+all: $(ALL_C)
 
 insertion: insertion.o main.o
 
@@ -10,3 +13,5 @@ quick: quick.o main.o
 
 heap: heap.o main.o
 
+test:
+	./test.sh $(ALL_C) $(ALL_PY)
