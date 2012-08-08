@@ -1,7 +1,9 @@
+#!/usr/bin/env python
 def main(*args):
     l = [int(i) for i in args]
+    print ("Before: %s" % " ".join(["%3d" % i for i in l]))
     l2 = insertion(l)
-    print ("Result: %s" % l2)
+    print ("Result: %s" % " ".join(["%3d" % i for i in l2]))
 
 def insertion(l):
     for i in range(len(l)):
