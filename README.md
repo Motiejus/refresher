@@ -14,8 +14,4 @@ Kaip garsiai spręsti uždavinį
 TODO
 ====
 
-1. Sort: merge vs quick vs heap -- implement.
-    Quick: space complexity: log n
-    Merge: space complexity: log n
-    Heap:  ?
 8. number theory, ch. 31 "GoF".
