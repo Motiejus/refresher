@@ -1,6 +1,6 @@
 CFLAGS = -g -Wall -Wextra -pedantic
 
-ALL_C = prim
+ALL_C = prim dijkstra
 
 .PHONY: all
 
